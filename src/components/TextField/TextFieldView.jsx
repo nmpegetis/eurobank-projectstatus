@@ -14,7 +14,7 @@ function TextFieldView({ classes, label, name, onChange, style, value = '', disa
 					disabled={disabled}
 					label={label}
 					name={name}
-					onChange={onChange}
+					onChange={({ target: { name, value } }) => onChange(name, value)}
 					style={style}
 					margin="normal"
 	/>
