@@ -7,9 +7,12 @@ import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
 
-function DatePickerView({ classes, label, initialDate, pickerType = 'date' }) {
+function DatePickerView({ classes, label, initialDate, name, onChange, pickerType = 'date' }) {
 	const [ selectedDate, setSelectedDate ] = useState(initialDate);
-
+	const handleClick = (date) => {
+		setSelectedDate(date);
+		onChange(date);
+	} 
 	return (
 		<MuiPickersUtilsProvider utils={DateFnsUtils}>
 			<Grid container className={classes.grid}>
@@ -19,9 +22,10 @@ function DatePickerView({ classes, label, initialDate, pickerType = 'date' }) {
 						variant="inline"
 						label={label || 'Date picker'}
 						format="dd/MM/yyyy"
+						name={name}
 						value={selectedDate}
 						InputAdornmentProps={{ position: 'end' }}
-						onChange={setSelectedDate}
+						onChange={handleClick}
 						style={{ marginRight: -5 }}
 					/>
 				) : (
@@ -30,9 +34,10 @@ function DatePickerView({ classes, label, initialDate, pickerType = 'date' }) {
 						variant="inline"
 						margin="normal"
 						label={label || 'Time picker'}
+						name={name}
 						value={selectedDate}
 						InputAdornmentProps={{ position: 'end' }}
-						onChange={setSelectedDate}
+						onChange={handleClick}
 					/>
 				)}
 			</Grid>

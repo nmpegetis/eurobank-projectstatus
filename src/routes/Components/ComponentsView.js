@@ -6,7 +6,7 @@ import { Tag } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 function ComponentsView(props) {
-	const handleChange = (e) => console.log('e', e.target.value);
+	const handleChange = (e) => console.log('e', e);
 	const handleClick = (e) => alert('clicked');
 	const handleSelectChange = (name, value) => {
 		console.log('name', name, 'value', value)
@@ -36,7 +36,7 @@ function ComponentsView(props) {
 		'many experienced developers in team',
 	];
 	const mandays = [ 100, 140, 150 ];
-	const lastUpdate = [ chooseDaysBefore(3), chooseDaysBefore(1), chooseDaysBefore(0), , chooseDaysBefore(6) ];
+	const lastUpdate = [ chooseDaysBefore(3), chooseDaysBefore(1), chooseDaysBefore(0), chooseDaysBefore(6) ];
 	const status = [ 'Started', 'On going', 'Finishing' ];
 
 	const projectStatusData = () => ({
@@ -123,7 +123,7 @@ function ComponentsView(props) {
 					name="select"
 					value={null}
 			/>,
-			<DatePicker label="Expire Date" initialDate={new Date('2020-01-01T00:00:00.000Z')} />,
+			<DatePicker label="Expire Date" name='expiredate' initialDate={new Date('2020-01-01T00:00:00.000Z')} onChange={handleChange} />,
 			<Table columns={columns} data={[ ...data, newProjectData ]}/>
 		</Fragment>
 	);
