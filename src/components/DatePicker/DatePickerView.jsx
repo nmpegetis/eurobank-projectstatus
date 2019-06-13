@@ -11,7 +11,7 @@ function DatePickerView({ classes, label, initialDate, name, onChange, pickerTyp
 	const [ selectedDate, setSelectedDate ] = useState(initialDate);
 	const handleClick = (date) => {
 		setSelectedDate(date);
-		onChange(name, date);
+		onChange(name, date.toLocaleDateString());
 	} 
 	return (
 		<MuiPickersUtilsProvider utils={DateFnsUtils}>
