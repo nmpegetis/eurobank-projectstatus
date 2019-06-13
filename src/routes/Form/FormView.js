@@ -23,7 +23,7 @@ class FormView extends Component {
 		}
 	}
 
-	handleClick = (e) => alert('clicked');
+	handleClick = (e) => this.props.onChange(this.state);
 	handleChange = (name, value) => {
 		console.log('name', name, 'value', value)
 		this.setState(()=>({ [name]: value }))
