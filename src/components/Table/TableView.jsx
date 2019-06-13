@@ -5,7 +5,6 @@ import styles from './styles';
 import { Table } from 'antd';
 
 function TableView({ columns, data }) {
-	console.log(columns,data)
 	return (
 			<Table columns={columns} dataSource={data} />
 	);

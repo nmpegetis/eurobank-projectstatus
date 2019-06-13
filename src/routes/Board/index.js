@@ -1,3 +1,14 @@
 import BoardView from './BoardView';
+import { connect } from 'react-redux'
+import { getData } from '../../actions'
 
-export default BoardView;
+const mapStateToProps = state => ({
+  data: state
+})
+
+const mapDispatchToProps = (getData())
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BoardView);

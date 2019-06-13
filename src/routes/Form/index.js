@@ -1,3 +1,4 @@
 import FormView from './FormView';
+import { connect } from 'react-redux'
 
-export default FormView;
+export default connect()(FormView);

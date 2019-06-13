@@ -11,64 +11,17 @@ import Board from '../routes/Board';
 import Components from '../routes/Components';
 import Form from '../routes/Form';
 import { mainMenuEntries } from './menu';
-import { Tag } from 'antd';
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 class Layout extends React.Component {
 	state = {
 		open: false,
 		activeEntry: '',
-		data: [],
-		columns: []
 	};
 
-	componentDidUpdate(prevProps, prevState){
-		const { data: prevData } = prevState;
-		const { data } = this.state;
-
-		if (!prevData.length && data.length){
-			console.log('I should only get in here once!')
-			this.setState(() => ({ 
-				columns: Object.keys(data[0]).map((key) => ({
-					title: key.toUpperCase(),
-					dataIndex: key,
-					key: key,
-					render: (inputElement) =>
-						key === 'unit' ? (
-							<a href="javascript:;">{inputElement}</a>
-						) : key === 'team' ? (
-							<span>
-								{inputElement.map((tag) => {
-									return <Tag key={tag}>{tag.toUpperCase()}</Tag>;
-								})}
-							</span>
-						) : key === 'status' ? (
-							<span>
-								<Tag
-									color={
-										inputElement === 'Started' ? 'green' : inputElement === 'On going' ? 'geekblue' : 'volcano'
-									}
-									key={inputElement}
-								>
-									{inputElement.toUpperCase()}
-								</Tag>
-							</span>
-						) : (
-							inputElement
-						),
-				}))
-		}))
-	}
-	}
-
-	handleChange = (data) => {
-		this.setState((state)=>({data: [...state.data, data]}))
-	}
-
 	routeComponentsMap = {
-		Board: () => <Board columns={this.state.columns} data={this.state.data}/>,	
+		Board,	
 		Components, 
-		Form: () => <Form onChange={this.handleChange}/>
+		Form
 	};
 
 	handleActiveMenuEntry = (value) => {

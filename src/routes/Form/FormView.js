@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 import { Button, TextField, Select, DatePicker } from '../../components';
 import Grid from '@material-ui/core/Grid';
+import { addRow } from '../../actions'
 
 class FormView extends Component {
 	constructor(props){
@@ -23,7 +24,7 @@ class FormView extends Component {
 		}
 	}
 
-	handleClick = (e) => this.props.onChange(this.state);
+	handleClick = (e) => this.props.dispatch(addRow(this.state))
 	handleChange = (name, value) => {
 		console.log('name', name, 'value', value)
 		this.setState(()=>({ [name]: value }))
