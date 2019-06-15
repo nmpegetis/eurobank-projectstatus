@@ -15,11 +15,11 @@ class FormView extends Component {
 			desc: null,
 			supervisor: null,
 			team: null,
-			startingDate: null,
-			endingDate: null,
+			startingDate: new Date().toLocaleDateString(),
+			endingDate: new Date().toLocaleDateString(),
 			comments: null,
 			mandays: null,
-			lastUpdate: null,
+			lastUpdate: new Date().toLocaleDateString(),
 			status: null,
 		}
 	}
