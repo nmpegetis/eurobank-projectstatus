@@ -8,7 +8,7 @@ import styles from './styles';
 import Header from './Header';
 import Drawer from './Drawer';
 import Board from '../routes/Board';
-import Components from '../routes/Components';
+import Widgets from '../routes/Widgets';
 import Form from '../routes/Form';
 import { mainMenuEntries } from './menu';
 
@@ -20,7 +20,7 @@ class Layout extends React.Component {
 
 	routeComponentsMap = {
 		Board,	
-		Components, 
+		Widgets, 
 		Form
 	};
 

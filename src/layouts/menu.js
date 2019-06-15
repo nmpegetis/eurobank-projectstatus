@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 export const mainMenuEntries = {
 	Board: { link: '/', renderIcon: () => <CalendarTodayIcon /> },
 	Form: { link: '/form', renderIcon: () => <LibraryBooksIcon /> },
-	Components: { link: '/widgets', renderIcon: () => <BuildIcon /> },
+	Widgets: { link: '/widgets', renderIcon: () => <BuildIcon /> },
 };
 
 export const mainListItems = [

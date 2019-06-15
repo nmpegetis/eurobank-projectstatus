@@ -5,7 +5,7 @@ import { Button, TextField, Select, DatePicker, Table } from '../../components';
 import { Tag } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
-function ComponentsView(props) {
+function WidgetsView(props) {
 	const handleChange = (e) => console.log('e', e);
 	const handleClick = (e) => alert('clicked');
 	const handleSelectChange = (name, value) => {
@@ -129,4 +129,4 @@ function ComponentsView(props) {
 	);
 }
 
-export default withStyles(styles)(ComponentsView);
+export default withStyles(styles)(WidgetsView);
