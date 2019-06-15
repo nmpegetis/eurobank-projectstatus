@@ -53,7 +53,7 @@ class FormView extends Component {
 
 		return (
 			<Grid container>
-				<Grid item xs={2}>
+				<Grid item xs={12} sm={4} md={2}>
 						<Select
 							title="Unit"
 							data={this.units}
@@ -64,7 +64,7 @@ class FormView extends Component {
 							value={unit}
 					/>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={12} sm={4} md={2}>
 						<TextField
 							label={'Pem'}
 							disabled={false}
@@ -77,7 +77,7 @@ class FormView extends Component {
 							}}
 						/>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={12} sm={4} md={2}>
 						<TextField
 							label={'Title'}
 							disabled={false}
@@ -90,7 +90,7 @@ class FormView extends Component {
 							}}
 						/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 						<TextField
 							label={'Desc'}
 							disabled={false}
@@ -103,7 +103,7 @@ class FormView extends Component {
 							}}
 						/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 						<Select
 							title="Supervisor"
 							data={this.supervisors}
@@ -114,7 +114,7 @@ class FormView extends Component {
 							value={supervisor}
 					/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 						<Select
 							title="Team"
 							data={this.members}
@@ -125,13 +125,13 @@ class FormView extends Component {
 							value={team}
 					/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 					<DatePicker label="Starting Date" name='startingDate' initialDate={new Date()} onChange={this.handleChange}/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 					<DatePicker label="Ending Date" name='endingDate' initialDate={new Date()} onChange={this.handleChange}/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 						<TextField
 							label={'Comments'}
 							disabled={false}
@@ -144,7 +144,7 @@ class FormView extends Component {
 							}}
 						/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 						<TextField
 							label={'Mandays'}
 							disabled={false}
@@ -157,10 +157,10 @@ class FormView extends Component {
 							}}
 						/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 					<DatePicker label="Last Update" name='lastUpdate' initialDate={new Date()} onChange={this.handleChange}/>
 				</Grid>
-				<Grid item xs={2}>
+								<Grid item xs={12} sm={4} md={2}>
 						<Select
 							title="Status"
 							data={this.status}
