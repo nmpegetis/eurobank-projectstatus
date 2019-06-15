@@ -1,4 +1,5 @@
 # Eurobank Training - React Application
+
 > #### In this repository we are going step-by-step to create a react application for the bank's projects' status
 > * [<strong>Guidelines:</strong> How to proceed in this training tutorial](#0)
 > * [Step 1: Create a fresh react app](#1)
