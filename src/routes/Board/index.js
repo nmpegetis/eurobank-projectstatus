@@ -1,12 +1,15 @@
 import BoardView from './BoardView';
-import { connect } from 'react-redux'
-import { getData } from '../../actions'
+import { columnsGenerator } from './utils';
+import { connect } from 'react-redux';
+import { getData } from '../../actions';
 
 const mapStateToProps = state => ({
   data: state
-})
+});
 
-const mapDispatchToProps = (getData())
+const mapDispatchToProps = (getData());
+
+export { columnsGenerator };
 
 export default connect(
   mapStateToProps,
