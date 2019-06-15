@@ -5,6 +5,7 @@ export default (state = [], action) => {
         ...state,
         action.payload,
       ]
+    case 'GET_ROWS':
     default:
       return state
   }

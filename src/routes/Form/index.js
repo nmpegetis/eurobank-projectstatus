@@ -1,4 +1,8 @@
 import FormView from './FormView';
 import { connect } from 'react-redux'
+import { addRow } from '../../actions'
 
-export default connect()(FormView);
+const mapDispatchToProps = {
+  addRow
+}
+export default connect(null,mapDispatchToProps)(FormView);
